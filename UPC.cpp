@@ -76,4 +76,3 @@ bool &UPC::operator==(const UPC &other) {
     bool *pCheck = &check;
     return *pCheck;
 }
-

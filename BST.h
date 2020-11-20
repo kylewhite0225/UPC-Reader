@@ -30,8 +30,6 @@ public:
     void insert(T item);
     // Erases T item from the tree using the right subtree method and returns true if complete.
     bool erase(T item);
-    // Prints the tree in order.
-    void printInOrder();
     // Searches for T item and returns the item if found.
     T search(T item);
     // Erases an item using the left subtree method.
@@ -48,8 +46,6 @@ public:
     BST(const BST<T> &other);
     // Assignment constructor
     BST<T> &operator=(const BST<T> &other);
-    // Returns true if the tree is a valid binary search tree.
-    bool validate();
     // Returns the next item in the tree after the input T item.
     T &findNext(T item);
     // Returns the item at the kth value of the tree.

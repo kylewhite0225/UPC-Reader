@@ -18,7 +18,7 @@ BST and UPC classes, as well as the buildTree and performSearchBST functions
 defined in this file.
 */
 
-// The buildTree functiona accepts a pointer to an ifstream object which is 
+// The buildTree function accepts a pointer to an ifstream object which is 
 // initiated in the main function, and returns a BST<UPC>. It uses the getline method to 
 // capture each line of the CSV file using a stringstream object and while loops.
 

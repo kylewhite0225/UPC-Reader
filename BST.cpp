@@ -86,25 +86,6 @@ void insert2(Node<T> *&root, T item)
         insert2(root->right, item);
 }
 
-// Wrapper method for the printInOrder2 method which prints the tree.
-template <class T>
-void BST<T>::printInOrder()
-{
-    printInOrder2(root);
-}
-
-// printInOrder2 method which recursively prints the tree to the console.
-template <class T>
-void printInOrder2(Node<T> *root)
-{
-    if (root != NULL)
-    {
-        printInOrder2(root->left);
-        cout << root->data << " ";
-        printInOrder2(root->right);
-    }
-}
-
 // Wrapper method for the findMax2 method which returns the maximum T item
 // in the binary search tree.
 template <class T>
@@ -339,32 +320,6 @@ BST<T> &BST<T>::operator=(const BST<T> &other)
 {
     root = copySubtree(other.root);
     return *this;
-}
-
-// Wrapper method for the validate2 method which returns true if the tree is a binary search tree
-template <class T>
-bool BST<T>::validate()
-{
-    return validate2(root);
-}
-
-// Returns true if the tree is a binary search tree
-template <class T>
-bool validate2(Node<T> *root)
-{
-    if (root == NULL)
-        return true;
-
-    bool isLeftBST = validate2(root->left);
-    bool isRightBST = validate2(root->right);
-
-    if (isLeftBST && isRightBST)
-    {
-        return (root->left == NULL || findMax2(root->left) < root->data) &&
-               (root->right == NULL || findMin2(root->right) >= root->data);
-    }
-
-    return false;
 }
 
 // Wrapper method for the findNext2 method which returns the next item in the tree
